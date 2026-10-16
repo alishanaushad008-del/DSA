@@ -1,0 +1,29 @@
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+int findTheWinner(int n, int k) {
+    queue<int> q;
+    for (int i = 1; i <= n; i++) {
+        q.push(i);
+    }
+    
+    while (q.size() > 1) {
+        for (int i = 0; i < k - 1; i++) {
+            q.push(q.front());
+            q.pop();
+        }
+        q.pop();
+    }
+    
+    return q.front();
+}
+
+int main() {
+    int n, k;
+    if (cin >> n >> k) {
+        cout << findTheWinner(n, k) << endl;
+    }
+    return 0;
+}

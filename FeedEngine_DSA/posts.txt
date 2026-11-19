@@ -1,0 +1,13 @@
+POST|1|0|feedengine|Sports|Football Highlights
+POST|2|0|feedengine|Technology|AI Revolution
+POST|3|1|feedengine|Makeup|Makeup Tutorial
+POST|4|0|feedengine|Beauty|Beauty Skincare Routine
+POST|5|0|feedengine|Education|Study Tips
+POST|6|0|feedengine|Health|Healthy Diet
+POST|7|0|feedengine|Fitness|Gym Workout
+POST|8|0|feedengine|Travel|Travel Vlog
+POST|9|0|feedengine|Technology|Coding Basics
+POST|10|1|feedengine|Fashion|Fashion Trends
+POST|11|0|feedengine|Gaming|Gaming Review
+POST|12|0|feedengine|Education|Science Facts
+POST|13|0|feedengine|News|News Update

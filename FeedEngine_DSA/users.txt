@@ -1,0 +1,12 @@
+USER|zainabb|zainab|20
+INTEREST|technoloy
+INTEREST|makeup
+INTEREST|sports
+LIKE|3
+USER|zainabbbb|zainzabbbb|18
+INTEREST|sports
+INTEREST|tech
+LIKE|10
+USER|zain|zain|23
+INTEREST|beauty
+INTEREST|makeup

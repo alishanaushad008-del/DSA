@@ -1,0 +1,96 @@
+FeedEngine - How It Works (for our group)
+
+Read this first. It explains the whole project in simple words, so all three
+of us can explain any part of it to sir.
+
+
+1. What the program does
+
+FeedEngine is a mini social media app that runs in the console.
+You can sign up, log in, scroll posts, like a post and undo the like,
+see the top 5 trending posts, search and sort posts, see all titles A to Z,
+follow friends and get friend suggestions, and read notifications.
+Everything is saved in posts.txt and users.txt, so nothing is lost.
+
+The point of the project: every feature uses a data structure from our
+DSA course, and we wrote every data structure ourselves (no STL containers).
+
+
+2. Where to start reading the code
+
+Read the files in this order. Each file starts with a comment that explains
+it in plain words.
+
+    1) main.cpp          The menus. START HERE. Very short.
+    2) Screens.h         Everything you see on the screen.
+    3) FeedEngine.h      The brain. Every feature is one function here,
+                         for example likePost() is "what happens when you
+                         press Like", in 5 commented steps.
+    4) DataStructures/   Our 8 data structures. Read the top comment of
+                         each file: it explains it with an everyday example.
+    5) Algorithms/       Sorting (6 sorts) and Searching (linear + binary).
+    6) FileManager.h     Saving and loading the two text files.
+    7) Post.h, User.h    The two main classes (from our OOP project).
+
+
+3. Each feature and its data structure
+
+    Feature                     Data structure        Everyday example            Week
+    --------------------------  --------------------  --------------------------  -------
+    Scroll the feed (N / P)     Doubly linked list    People holding hands        2-3
+    Like and Undo               Stack                 A pile of plates            4
+    Notifications               Circular queue        A line at the bank          5
+    Recommendations             Priority queue        Hospital waiting room       5
+    Top 5 trending              Max-heap              A league table              10
+    Find a post / a user        Hash table            A phone book with tabs      15
+    Search by ID                Binary search         Open a book in the middle   1
+    Search by keyword           Linear search         Read page by page           1
+    Sort posts                  6 sorting algorithms  Sorting playing cards       6, 7, 10
+    Titles A to Z               AVL tree              A tree that stays balanced  9, 11, 12
+    Friends and suggestions     Graph + BFS           A map of who follows whom   13
+
+
+4. Words sir may ask about
+
+    O(1)          Same time no matter how many posts. Like opening a book
+                  at a page number you already know.
+    O(log n)      Double the posts, only one more step. Like binary search.
+    O(n)          Double the posts, double the work. Like reading every page.
+    O(n^2)        Double the posts, four times the work. Slow for big data.
+    Template      "template <class T>": write the code once, use it for any
+                  type (int, string, Post*...).
+    Node          One box in a linked structure: some data plus pointers
+                  to the boxes next to it.
+    Overflow      Adding to a full structure (a full queue).
+    Underflow     Removing from an empty structure (pop on an empty stack).
+    Collision     Two keys land in the same hash table bucket. We chain them.
+    Load factor   How full the hash table is. Above 75% we "rehash" into a
+                  bigger table.
+    Rotation      How the AVL tree fixes itself when one side gets too tall.
+    BFS           Breadth-first search: visit people level by level with a
+                  queue. Finds "people you may know" and the shortest path.
+    Singleton     Only ONE FeedEngine object exists. getInstance() returns it.
+    Result        What happened after an action (Done, AlreadyLiked, ...).
+                  FeedEngine returns it, Screens.h prints the message.
+
+
+5. Who explains what (suggestion)
+
+    Person 1   Intro, the problem, feed (linked list), like and undo (stack),
+               notifications (queue)
+    Person 2   Trending (heap), search (hash table, binary, linear), sorting
+    Person 3   Titles A to Z (AVL tree), friends (graph + BFS),
+               the code walkthrough, results and the live demo
+
+
+6. How to run it
+
+    From the FeedEngine_DSA folder:
+        g++ main.cpp -o FeedEngine
+        FeedEngine
+
+    Tests (every line should say PASS):
+        g++ single_file/FeedEngine_Tests.cpp -o FeedEngine_Tests
+        FeedEngine_Tests
+
+    Always leave with 15 (Logout) or 16 (Save & Exit), so your data is saved.
